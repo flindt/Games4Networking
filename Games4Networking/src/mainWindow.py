@@ -14,6 +14,8 @@ if __name__ == '__main__':
     win = tk.Frame()
     win.pack()
     
+    buttonGameFlindt = tk.Button( win, text = "a puzzle", command = win.quit).pack(side=tk.TOP)
+    
     buttonQuit = tk.Button( win, text = "Quit", command = win.quit).pack(side=tk.RIGHT)    
     
     win.mainloop()
