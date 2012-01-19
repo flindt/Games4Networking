@@ -19,7 +19,7 @@ If you want the latest from some elses repository (maybe mine) you must do this:
             "
 '''
 import tkinter as tk
-import mypopup.popup as victorpopup
+import mypopup.popupclass as vpopup
     
 
 if __name__ == '__main__':
@@ -32,7 +32,7 @@ if __name__ == '__main__':
     # Everyone should add their own button like this 
     
     buttonGameFlindt = tk.Button( win, text = "a puzzle", command = win.quit).pack(side=tk.TOP)
-    buttonVictor = tk.Button( win, text="TEST", command=victorpopup.popout).pack(side=tk.BOTTOM)
+    buttonVictor = tk.Button( win, text="TEST", command=vpopup.MyClass).pack(side=tk.BOTTOM)
     buttonQuit = tk.Button( win, text = "Quit", command = win.quit).pack(side=tk.RIGHT)    
     
 
