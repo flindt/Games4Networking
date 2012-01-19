@@ -16,19 +16,32 @@ class MyClass(object):
         Constructor
         '''
         
-        other = tk.Toplevel()
-        other.title("Victors Window")
-        otherlabel = tk.Label(other, text='this is it', relief = tk.RIDGE)
-        otherlabel.pack(side=tk.TOP, fill = tk.BOTH, expand = tk.YES)
-        otherbutton = tk.Button(other, text='CLICK ME', command=self.buttonclick).pack(side=tk.TOP)
-        otherbutton = tk.Button(other, text='NO,NO, CLICK ME').pack(side=tk.BOTTOM)
+        self.other = tk.Toplevel()
+        self.other.title("Victors Window")
+        self.otherlabel = tk.Label(self.other, text='This exchanges Kr to Euro and RON', relief = tk.RIDGE)
+        self.otherlabel.pack(side=tk.TOP, fill = tk.BOTH, expand = tk.YES)
+        self.otherbutton = tk.Button(self.other, text='EXCHANGE', command=self.buttonclick).pack(side=tk.TOP)
+        self.otherbutton = tk.Button(self.other, text='QUIT', command=self.other.quit).pack(side=tk.BOTTOM)
+        self.outputvalue = tk.StringVar()
+        self.otherlabel1 = tk.Label(self.other, textvariable =self.outputvalue).pack(side=tk.BOTTOM)
         
-        self.e = tk.Entry(other)
+        self.e = tk.Entry(self.other)
         self.e.pack(side=tk.TOP)
-        
+    
     def buttonclick(self):
-        print (self.e.get())
+        print ('so, you want to exchange', self.e.get(),'kr')
+        x = int(self.e.get())
+        euro = x*0.14
+        ron = x*0.59
+        print ('that means',euro, 'euros and', ron, 'rons')
         
+        self.outputvalue.set(str(euro)+" euros")
+        
+        
+        
+        
+        
+    '''
     def currencyconv(self):
         print("what do you want to exchange")
         what = input()
@@ -46,9 +59,13 @@ class MyClass(object):
             ron = x*6
             euro = x*0.13
             return(x,what, "inseamna",ron,"ron si",euro,"euro") 
-
+    '''
 if __name__ == '__main__':
+    
     win = tk.Frame()
     win.pack()
+    
+    
     MyClass()
+    
     win.mainloop( )
