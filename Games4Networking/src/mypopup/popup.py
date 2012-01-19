@@ -10,7 +10,7 @@ def currencyconv():
     print("what do you want to exchange")
     what = input()
     print("and how much")
-    x = int(self.e.get())
+    x = int(input())
     if what == "ron" or "lei":
         euro = x*0.23
         dkk = x*1.71
