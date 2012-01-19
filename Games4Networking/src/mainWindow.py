@@ -19,12 +19,7 @@ If you want the latest from some elses repository (maybe mine) you must do this:
             "
 '''
 import tkinter as tk
-
-def popout():
-    other = tk.Toplevel()
-    other.title("Second Window")
-    otherlabel = tk.Label(other, text='this is it', relief = tk.RIDGE)
-    otherlabel.pack(side=tk.TOP, fill = tk.BOTH, expand = tk.YES)
+import mypopup.popupclass as vpopup
     
 
 if __name__ == '__main__':
@@ -37,7 +32,7 @@ if __name__ == '__main__':
     # Everyone should add their own button like this 
     
     buttonGameFlindt = tk.Button( win, text = "a puzzle", command = win.quit).pack(side=tk.TOP)
-    buttonVictor = tk.Button( win, text="TEST", command=popout).pack(side=tk.BOTTOM)
+    buttonVictor = tk.Button( win, text="TEST", command=vpopup.MyClass).pack(side=tk.BOTTOM)
     buttonQuit = tk.Button( win, text = "Quit", command = win.quit).pack(side=tk.RIGHT)    
     
 
