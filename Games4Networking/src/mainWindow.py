@@ -34,7 +34,6 @@ def gameNilsas():
     otherlabel = tk.Label(other1, text='Entering The apple game', relief = tk.RIDGE)
     otherlabel.pack(side=tk.TOP, fill = tk.BOTH, expand = tk.YES)
     Apple.start()
->>>>>>> refs/remotes/Nilsas/master
     
 
 if __name__ == '__main__':
@@ -47,14 +46,13 @@ if __name__ == '__main__':
     # Everyone should add their own button like this 
     
     buttonGameFlindt = tk.Button( win, text = "a puzzle", command = win.quit).pack(side=tk.TOP)
-<<<<<<< HEAD
+    
     buttonVictor = tk.Button( win, text="TEST", command=vpopup.MyClass).pack(side=tk.BOTTOM)
     buttonQuit = tk.Button( win, text = "Quit", command = win.quit).pack(side=tk.RIGHT)    
-=======
+
     buttonVictor = tk.Button( win, text="TEST", command=popout).pack(side=tk.TOP)
     buttonNilsas = tk.Button( win, text="Apple Game(Nilsas)", command=gameNilsas).pack(side=tk.TOP)
-    buttonQuit = tk.Button( win, text = "Quit", command = win.quit).pack(side=tk.TOP)    
->>>>>>> refs/remotes/Nilsas/master
+    buttonQuit = tk.Button( win, text = "Quit", command = win.quit).pack(side=tk.TOP)
     
 
 #   labelVictor = tk.Label(win, text="Victors stuff here").pack(side=tk.BOTTOM)
