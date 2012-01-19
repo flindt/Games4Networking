@@ -20,6 +20,21 @@ If you want the latest from some elses repository (maybe mine) you must do this:
 '''
 import tkinter as tk
 import mypopup.popupclass as vpopup
+import Apple
+
+def popout():
+    other = tk.Toplevel()
+    other.title("Second Window")
+    otherlabel = tk.Label(other, text='this is it', relief = tk.RIDGE)
+    otherlabel.pack(side=tk.TOP, fill = tk.BOTH, expand = tk.YES)
+
+def gameNilsas():
+    other1 = tk.Toplevel()
+    other1.title("The iGame")
+    otherlabel = tk.Label(other1, text='Entering The apple game', relief = tk.RIDGE)
+    otherlabel.pack(side=tk.TOP, fill = tk.BOTH, expand = tk.YES)
+    Apple.start()
+>>>>>>> refs/remotes/Nilsas/master
     
 
 if __name__ == '__main__':
@@ -32,8 +47,14 @@ if __name__ == '__main__':
     # Everyone should add their own button like this 
     
     buttonGameFlindt = tk.Button( win, text = "a puzzle", command = win.quit).pack(side=tk.TOP)
+<<<<<<< HEAD
     buttonVictor = tk.Button( win, text="TEST", command=vpopup.MyClass).pack(side=tk.BOTTOM)
     buttonQuit = tk.Button( win, text = "Quit", command = win.quit).pack(side=tk.RIGHT)    
+=======
+    buttonVictor = tk.Button( win, text="TEST", command=popout).pack(side=tk.TOP)
+    buttonNilsas = tk.Button( win, text="Apple Game(Nilsas)", command=gameNilsas).pack(side=tk.TOP)
+    buttonQuit = tk.Button( win, text = "Quit", command = win.quit).pack(side=tk.TOP)    
+>>>>>>> refs/remotes/Nilsas/master
     
 
 #   labelVictor = tk.Label(win, text="Victors stuff here").pack(side=tk.BOTTOM)
