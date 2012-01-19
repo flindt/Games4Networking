@@ -10,7 +10,7 @@ def currencyconv():
     print("what do you want to exchange")
     what = input()
     print("and how much")
-    x = int(e.get())
+    x = int(self.e.get())
     if what == "ron" or "lei":
         euro = x*0.23
         dkk = x*1.71
@@ -23,7 +23,7 @@ def currencyconv():
         ron = x*6
         euro = x*0.13
         return(x,what, "inseamna",ron,"ron si",euro,"euro") 
- 
+'''
 def popout():
     
     other = tk.Toplevel()
@@ -36,3 +36,4 @@ def popout():
     e = tk.Entry(other)
     e.pack(side=tk.TOP)
     e.get()
+'''
